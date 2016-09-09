@@ -1,6 +1,12 @@
 \documentclass[11pt, a4paper, english]{article}
 \usepackage[T1]{fontenc}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{url}
+
+\newcommand{\todos}[1]{\todo[inline]{#1}}
 
 \author{
 	Salinas Mendoza, Franco J. \\
@@ -12,16 +18,42 @@
 \date{\today}
 
 
-\title{µFuzzy: a highly efficient fuzzy logic library for microcontrollers}
+\title{$\mu$Fuzzy: a highly efficient fuzzy logic library for microcontrollers}
 
 \begin{document}
 \maketitle
 
-\begin{abstract}
+\begin{abstract} 
+
+This paper introduces  a novel fuzzy logic library, named $\mu$Fuzzy,
+especially designed for low cost embedded systems.  Although there are other
+fuzzy logic libraries available,  the one presented here overcomes some
+others' limitations.
+
+It is a lightweight library, written in ANSI C, needing only XXX KB \todo{completar el tamaño de la librería en el abstract}of memory,
+which  uses fixed point arithmetic and does not use dynamic memory allocation,
+enabling the use of real-time operating systems. These features allow the
+library to be implemented in any microcontroller with ARM Cortex-M0 core,
+enabling fuzzy logic functions to very low cost devices. It is compatible with
+current fuzzy logic tools, and it is free and open source (?).
+
+A comparison with most popular fuzzy logic libraries is made, 
+
+An extensive computational study is carried out and the results are compared with several
+algorithms from the literature.
+
+
+
+
 \end{abstract}
 
 \section{Introduction}
+\todos{Para no olvidarme, no me convence el highly efficient el título}
 
+
+There are a couple of well known fuzzy logic libraries, such as 
+Although there are other fuzzy logic libraries available, such as fuzzylite \cite{fl::fuzzylite}, Free Fuzzy
+Logic Library \cite{xxx} and eFuzzy \cite{xxx}, 
 \section{Related work}
 \label{previous work}
 
